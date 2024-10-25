@@ -1,0 +1,28 @@
+// {
+//   "extends": "../../tsconfig.json",
+//   "compilerOptions": {
+//     "declaration": false,
+//     "outDir": "../../dist/apps/movie"
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+// }
+
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["apps/*"],
+      "@shared/*": ["shared/*"]
+    }
+  },
+  "include": ["apps/**/*", "libs/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
